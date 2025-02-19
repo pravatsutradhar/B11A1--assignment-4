@@ -132,3 +132,63 @@ function analyzeResults() {
 }
 
 
+
+// Person Match 
+
+function validProposal(person1, person2) {
+    if (typeof person1 !== 'object' || typeof person2 !== 'object') {
+        return "Invalid";
+    }
+
+    if (!('name' in person1 && 'gender' in person1 && 'age' in person1) ||
+        !('name' in person2 && 'gender' in person2 && 'age' in person2)) {
+        return "Invalid";
+    }
+
+    if (typeof person1.name !== 'string' || typeof person2.name !== 'string' ||
+        typeof person1.gender !== 'string' || typeof person2.gender !== 'string' ||
+        typeof person1.age !== 'number' || typeof person2.age !== 'number') {
+        return "Invalid";
+    }
+
+    if (person1.gender === person2.gender) {
+        return false;
+    }
+
+    if (Math.abs(person1.age - person2.age) > 7) {
+        return false;
+    }
+
+    return true;
+}
+
+// Example 1: Valid Proposal
+const person1 = { name: 'Alice', gender: 'Female', age: 25 };
+const person2 = { name: 'Bob', gender: 'Male', age: 28 };
+console.log(validProposal(person1, person2));
+
+
+function handleSubmit() {
+    // Get input values from the form
+    const name1 = document.getElementById('name1').value;
+    const gender1 = document.getElementById('gender1').value;
+    const age1 = parseInt(document.getElementById('age1').value);
+    
+    const name2 = document.getElementById('name2').value;
+    const gender2 = document.getElementById('gender2').value;
+    const age2 = parseInt(document.getElementById('age2').value);
+
+    // Create person objects
+    const person1 = { name: name1, gender: gender1, age: age1 };
+    const person2 = { name: name2, gender: gender2, age: age2 };
+
+    // Validate the proposal
+    const result = validProposal(person1, person2);
+    
+    // Display result in the table
+    const resultTable = document.getElementById('result-table');
+    const newRow = resultTable.insertRow();
+    const newCell = newRow.insertCell();
+    newCell.textContent = result === true ? "Valid Proposal" : result === false ? "Proposal Invalid: Gender or Age" : "Invalid Input";
+}
+
