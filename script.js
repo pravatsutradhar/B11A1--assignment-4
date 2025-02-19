@@ -192,3 +192,52 @@ function handleSubmit() {
     newCell.textContent = result === true ? "Valid Proposal" : result === false ? "Proposal Invalid: Gender or Age" : "Invalid Input";
 }
 
+
+// Sleep Calculate 
+
+function calculateSleepTime(times) {
+    if (!Array.isArray(times)) {
+        return "Invalid";
+    }
+
+    let totalSeconds = 0;
+    for (let time of times) {
+        if (typeof time !== 'number') {
+            return "Invalid";
+        }
+        totalSeconds += time;
+    }
+
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return { hour: hours, minute: minutes, second: seconds };
+}
+
+
+function getInputAndCalculate() {
+    const input = document.getElementById('sleepTime').value;
+    
+    const times = input.split(',').map(time => Number(time.trim()));
+
+    
+    if (times.some(time => isNaN(time) || typeof time !== 'number')) {
+        document.getElementById('result').innerText = "Invalid";
+        return;
+    }
+
+  
+    const result = calculateSleepTime(times);
+
+    
+    if (result !== "Invalid") {
+        document.getElementById('result').innerText = `Hours: ${result.hour}, Minutes: ${result.minute}, Seconds: ${result.second}`;
+    } else {
+        document.getElementById('result').innerText = result; 
+    }
+}
+
+console.log(calculateSleepTime([1000, 2000, 725]));
+
+

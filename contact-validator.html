@@ -3,37 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Validator</title>
-    
+    <title>Provat Kumar Sutradhar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="head">
-        <h1>Contact Number Validator</h1>
+    <!-- Header Section -->
+    <header>
+        <div class="header-wrap">
+            <div class="container">
+                <div class="head-flex-wrap">
+                    <h1>Provat Kumar Sutradhar</h1>
+                    <nav>
+                        <a href="vat-calculations.html">Calculator</a>
+                        <a href="contact-validator.html">Contact Number</a>
+                        <a href="person.html">Person Match</a>
+                        <a href="admission.html">Admission</a>
+                        <a href="sleep-calculate.html">Sleep Calculator</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div class="vat-wrap">
-        <div class="user-input">
-            <h2>Enter Contact Number</h2>
-            <div class="user-input-wrap">
-                <input type="text" id="contact" placeholder="Enter contact number">
-                <button onclick="addToTable()">Validate</button>
+    <!-- Header Section End-->
+
+    <div class="hero">
+        <div class="vat-wrap">
+            <div class="user-input">
+                <h2>Enter Contact Number</h2>
+                <div class="user-input-wrap">
+                    <input type="text" id="contact" placeholder="Enter contact number">
+                    <button onclick="addToTable()">Validate</button>
+                </div>
             </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Contact Number</th>
+                        <th>Validation Result</th>
+                    </tr>
+                </thead>
+                <tbody id="contactTable">
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Contact Number</th>
-                <th>Validation Result</th>
-            </tr>
-        </thead>
-        <tbody id="contactTable">
-        </tbody>
-    </table>
+    
 
+       <!-- Footer Section -->
+       <footer>
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+    
     <script src="script.js" ></script>
 
 </body>

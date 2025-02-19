@@ -4,111 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposal Validation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        h3 {
-            color: #555;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 8px;
-        }
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: block;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-        table th, table td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        table th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Proposal Validation</h1>
-        
-        <h3>Person 1</h3>
-        <form id="person1-form">
-            <label for="name1">Name:</label>
-            <input type="text" id="name1" required><br>
-            
-            <label for="gender1">Gender:</label>
-            <input type="text" id="gender1" required><br>
-            
-            <label for="age1">Age:</label>
-            <input type="number" id="age1" required><br>
-        </form>
-        
-        <h3>Person 2</h3>
-        <form id="person2-form">
-            <label for="name2">Name:</label>
-            <input type="text" id="name2" required><br>
-            
-            <label for="gender2">Gender:</label>
-            <input type="text" id="gender2" required><br>
-            
-            <label for="age2">Age:</label>
-            <input type="number" id="age2" required><br>
-        </form>
+<body class="person">
+     <!-- Header Section -->
+     <header>
+        <div class="header-wrap">
+            <div class="container">
+                <div class="head-flex-wrap">
+                    <h1>Provat Kumar Sutradhar</h1>
+                    <nav>
+                        <a href="vat-calculations.html">Calculator</a>
+                        <a href="contact-validator.html">Contact Number</a>
+                        <a href="person.html">Person Match</a>
+                        <a href="admission.html">Admission</a>
+                        <a href="sleep-calculate.html">Sleep Calculator</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <button onclick="handleSubmit()">Validate Proposal</button>
+    <!-- Header Section End-->
 
-        <h3>Result:</h3>
-        <table id="result-table">
-            <tr>
-                <th>Valid Proposal</th>
-            </tr>
-        </table>
+    <div class="hero">
+        <div class="person">
+            <div class="container">
+                <h1>Proposal Validation</h1>
+                
+                <div class="two-person-wrap">
+                    <div class="person-1">
+                        <h3>Person 1</h3>
+                        <form id="person1-form">
+                            <label for="name1">Name:</label>
+                            <input type="text" id="name1" required><br>
+                            
+                            <label for="gender1">Gender:</label>
+                            <input type="text" id="gender1" required><br>
+                            
+                            <label for="age1">Age:</label>
+                            <input type="number" id="age1" required><br>
+                        </form>
+                    </div>
+                    
+                    <div class="person-2">
+                        <h3>Person 2</h3>
+                        <form id="person2-form">
+                            <label for="name2">Name:</label>
+                            <input type="text" id="name2" required><br>
+                            
+                            <label for="gender2">Gender:</label>
+                            <input type="text" id="gender2" required><br>
+                            
+                            <label for="age2">Age:</label>
+                            <input type="number" id="age2" required><br>
+                        </form>
+                    </div>
+                </div>
+        
+                <button onclick="handleSubmit()">Validate Proposal</button>
+                <br>
+                <h3>Result:</h3>
+                <table id="result-table">
+                    <tr>
+                        <th>Valid Proposal</th>
+                    </tr>
+                </table>
+            </div>
+           </div>
     </div>
 
+      <!-- Footer Section -->
+      <footer>
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

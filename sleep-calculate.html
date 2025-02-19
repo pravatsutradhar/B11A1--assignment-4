@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B11-A2-Assignment-4</title>
-
+    <title>Proposal Validation</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+     <!-- Header Section -->
+     <header>
         <div class="header-wrap">
             <div class="container">
                 <div class="head-flex-wrap">
@@ -29,40 +27,32 @@
 
     <!-- Header Section End-->
 
-
     <section id="vatSection">
         <div class="hero">
             <div class="vat-wrap">
                 <div class="container">
                     <div class="user-input">
-                        <h2>VAT Calculator</h2>
+                        <h2>Sleep Time Calculator</h2>
+                        <h2>Enter Sleep Time (in seconds, separated by commas):</h2>
                         <div class="user-input-wrap">
-                            <input type="number" id="amount" placeholder="Enter product price">
-                        <button onclick="addToTable()">Add</button>
+                            <input type="text" id="sleepTime" placeholder="Example: 1000, 500, 700">
+                            <button onclick="getInputAndCalculate()">Calculate</button>
                         </div>
                     </div>
                 
-                    <table id="vat-count-table">
-                        <thead>
-                            <tr>
-                                <th>Product Price</th>
-                                <th>VAT (7.5%)</th>
-                            </tr>
-                        </thead>
-                        <tbody id="vatTable">
-                            
-                        </tbody>
-                    </table>
+                    <h2>Result:</h2>
+                    <p id="result"></p>
                 </div>
             </div>
         </div>
     </section>
 
-       <!-- Footer Section -->
-       <footer>
+
+    <!-- Footer Section -->
+    <footer>
         <p>&copy; 2025 All Rights Reserved.</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+   <script src="script.js"></script>
 </body>
 </html>

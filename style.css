@@ -19,12 +19,65 @@ header.head {
     text-align: center;
 }
 
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero{
+    padding: 50px;
+    background-color: #f4f4f9;
+    min-height: 90vh;
+}
+.hero-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90vh;
+}
+.hero img {
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+.contact-info {
+    max-width: 40%;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+
 
 /* Header End  */
 
 .vat-wrap {
     padding: 50px;
-    background-color: #e0e0e0;
 }
 
 .user-input {
@@ -70,4 +123,75 @@ table {
 th, td {
     border: 1px solid black;
     padding: 10px;
+}
+
+
+/* Person Math CSS  */
+.two-person-wrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.person-1{
+    flex: 0 0 50%;
+}
+.person-2{
+    flex: 0 0 50%;
+}
+.person form {
+    margin-bottom: 20px;
+}
+.person label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+.person input[type="text"],
+.person input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.person button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+.person button:hover {
+    background-color: #45a049;
+}
+.person table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.person table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.person table th {
+    background-color: #f2f2f2;
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
