@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafi's Exam Result Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="head">
+        <h1>Rafi's Exam Result Analysis</h1>
+    </header>
+
+    <div class="vat-wrap">
+        <div class="user-input">
+            <h2>Enter Exam Results</h2>
+            <div class="user-input-wrap">
+                <input type="text" id="resultInput" placeholder="Enter results separated by commas (e.g. 60,70,80,40)">
+                <button onclick="analyzeResults()">Analyze</button>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Results</th>
+                <th>Guideline</th>
+            </tr>
+        </thead>
+        <tbody id="resultTable">
+        </tbody>
+    </table>
+
+    <script src="script.js" ></script>
+
+</body>
+</html>

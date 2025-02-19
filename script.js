@@ -87,3 +87,48 @@ function addToTable() {
 }
 
 
+// Admission Functions 
+
+function willSuccess(results) {
+    // Check an array
+    if (!Array.isArray(results)) {
+        return "Invalid";
+    }
+
+    let passCount = 0;
+    let failCount = 0;
+
+    // Loop results array and count passes and fails
+    for (let score of results) {
+        if (typeof score !== 'number') {
+            return "Invalid";
+        }
+
+        if (score >= 50) {
+            passCount++;
+        } else {
+            failCount++;
+        }
+    }
+
+    return passCount >= failCount;
+}
+
+let passArray = willSuccess([60,40,80,20]);
+console.log(passArray)
+
+function analyzeResults() {
+    let input = document.getElementById("resultInput").value.trim();
+    let resultArray = input.split(',').map(item => parseInt(item.trim())); 
+    let result = willSuccess(resultArray); 
+
+    // Handle invalid input or result
+    let table = document.getElementById("resultTable");
+    let row = table.insertRow();
+    row.insertCell(0).innerText = input || "Empty Input";  
+    row.insertCell(1).innerText = result === "Invalid" ? "Invalid Input" : result ? "Pass" : "Fail";
+    
+    document.getElementById("resultInput").value = "";
+}
+
+
