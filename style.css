@@ -45,7 +45,7 @@ header.head {
     margin-bottom: 50px;
 }
 
-input#amount {
+.user-input-wrap input {
     padding: 18px;
     width: 300px;
     border: 1px solid #ddd;

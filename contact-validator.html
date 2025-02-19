@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Validator</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="head">
+        <h1>Contact Number Validator</h1>
+    </header>
+
+    <div class="vat-wrap">
+        <div class="user-input">
+            <h2>Enter Contact Number</h2>
+            <div class="user-input-wrap">
+                <input type="text" id="contact" placeholder="Enter contact number">
+                <button onclick="addToTable()">Validate</button>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Contact Number</th>
+                <th>Validation Result</th>
+            </tr>
+        </thead>
+        <tbody id="contactTable">
+        </tbody>
+    </table>
+
+    <script src="script.js" ></script>
+
+</body>
+</html>
