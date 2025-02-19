@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B11-A2-Assignment-4</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H2>B11-A2-Assignment-4</H2>
+    <header class="head">
+        <H2>B11-A2-Assignment-4</H2>
+    </header>
+
+
+    <section id="vatSection">
+        <div class="vat-wrap">
+            <div class="container">
+                <div class="user-input">
+                    <h2>VAT Calculator</h2>
+                    <div class="user-input-wrap">
+                        <input type="number" id="amount" placeholder="Enter product price">
+                    <button onclick="addToTable()">Add</button>
+                    </div>
+                </div>
+            
+                <table id="vat-count-table">
+                    <thead>
+                        <tr>
+                            <th>Product Price</th>
+                            <th>VAT (7.5%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vatTable">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
